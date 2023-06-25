@@ -20,9 +20,4 @@ public class Berserk extends Hero {
     public String toString() {
         return super.toString() + " BLOCKED: " + this.blockedDamage;
     }
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
 }

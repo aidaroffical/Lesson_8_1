@@ -16,10 +16,6 @@ public class Golem extends Hero {
     }
 
     @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-    }
-
-    @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
         for (int i = 0; i < heroes.length; i++) {
             if (boss.getHealth() == 0 && heroes[i].getHealth() > 0 && this != heroes[i]) {

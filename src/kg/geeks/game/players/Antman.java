@@ -13,12 +13,6 @@ public class Antman extends Hero{
         this.sizeModifier = 0;
     }
 
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
-
         public void setSizeModifier(int sizeModifier) {
             this.sizeModifier = sizeModifier;
         }

@@ -24,9 +24,4 @@ public class Bomber extends Hero {
             }
         }
     }
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
 }

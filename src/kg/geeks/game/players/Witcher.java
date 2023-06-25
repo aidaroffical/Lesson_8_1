@@ -1,36 +1,35 @@
 package kg.geeks.game.players;
 
-public class Witcher extends Hero {
-    public int getSave() {
-        return save;
-    }
+import kg.geeks.game.logic.RPG_Game;
 
-    public void setSave(int save) {
-        this.save = save;
-    }
-
-    private int save;
-
-
+public class Witcher extends Hero{
     public Witcher(int health, int damage, String name) {
         super(health, damage, SuperAbility.Revive, name);
     }
+    private boolean usedAbility = false;
 
 
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
-        if (this.getHealth() > 0) {
+        int chance = RPG_Game.random.nextInt(9) + 1;
+        if (getUsedAbility() == false) {
             for (int i = 0; i < heroes.length; i++) {
-                if (heroes[i].getHealth() == 0 && this != heroes[i]) {
-                    heroes[i].setHealth(heroes[i].getHealth() + this.getHealth());
+                if (heroes[i].getHealth() == 0 && chance < 7) {
+                    heroes[i].setHealth(200);
+                    System.out.println(heroes[i].getName() + " is revivaled");
+                    this.setHealth(0);
+                    setUsedAbility(true);
                     break;
                 }
             }
         }
     }
 
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
+    public boolean getUsedAbility() {
+        return usedAbility;
+    }
 
+    public void setUsedAbility(boolean usedAbility) {
+        this.usedAbility = usedAbility;
     }
 }

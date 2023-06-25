@@ -16,9 +16,4 @@ public class Magic extends Hero {
             }
         }
     }
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
 }

@@ -13,10 +13,5 @@ public class Warrior extends Hero {
         boss.setHealth(boss.getHealth() - this.getDamage() * coeff);
         System.out.println("Warrior " + this.getName() + " hits critically " + this.getDamage() * coeff);
     }
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
 }
 

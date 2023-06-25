@@ -15,6 +15,4 @@ public abstract class Hero extends GameEntity implements HavingSuperAbility {
     public void attack(Boss boss) {
         boss.setHealth(boss.getHealth() - this.getDamage());
     }
-
-    public abstract void applySuperPower(Hero[] heroes, Boss boss);
 }

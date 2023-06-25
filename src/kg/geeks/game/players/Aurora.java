@@ -28,17 +28,6 @@ public class Aurora extends Hero {
         }
     }
 
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-        if (isInvisible) {
-            System.out.println(getName() + " Can't get away from the boss!");
-            boss.setHealth(boss.getHealth() - getDamage());
-        } else {
-            System.out.println(getName() + " You can't touch me!");
-            setHealth(getHealth() - boss.getDamage());
-        }
-    }
-
     public void disappear() {
         if (!disappeared && invisibleRounds == 2) {
             disappeared = true;

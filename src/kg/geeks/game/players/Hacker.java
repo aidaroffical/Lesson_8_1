@@ -23,9 +23,4 @@ public class Hacker extends Hero {
 
         }
     }
-
-    @Override
-    public void applySuperPower(Hero[] heroes, Boss boss) {
-
-    }
 }
