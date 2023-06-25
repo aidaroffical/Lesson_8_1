@@ -11,7 +11,7 @@ public class Witcher extends Hero{
 
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
-        int chance = RPG_Game.random.nextInt(9) + 1;
+        int chance = RPG_Game.random.nextInt(8) + 1;
         if (getUsedAbility() == false) {
             for (int i = 0; i < heroes.length; i++) {
                 if (heroes[i].getHealth() == 0 && chance < 7) {
